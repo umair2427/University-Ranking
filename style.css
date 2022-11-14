@@ -1,0 +1,550 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&family=Roboto:ital,wght@0,300;0,400;0,700;1,500&display=swap');
+
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root{
+    --mehroon: #bf404c;
+    --white: #fff;
+    --black: #000;
+    --lightblack: #333333;
+}
+
+html{
+    font-family: 'Poppins', sans-serif;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* ############ Header ############# */
+
+.head{
+    padding: 25px 0;
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo img{
+    display: block;
+    width: 60px;
+}
+
+.nav-items{
+    display: flex;
+}
+
+.nav-items img{
+    display: block;
+    width: 30px;
+    margin-left: 18px;
+}
+
+/* ####### Section 1 ###### */
+
+.sec1{
+    background: url("./images/2.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 -300px;
+    height: 600px;
+    position: relative;
+}
+
+
+.sec1 .sec1-text{
+    width: 560px;
+    height: 547px;
+    background-color: var(--white);
+    padding: 50px 30px 20px 80px;
+    position: absolute;
+    top: 25%;
+    right: 0;
+}
+
+.sec1-text h1::before{
+    content: "";
+    border-top: 15px solid var(--mehroon);
+    width: 75%;
+    display: block;
+    padding-bottom: 80px;
+    position: absolute;
+    top: 8%;
+    right: 45%;
+}
+
+.sec1-text h1{
+    font-size: 50px;
+    font-weight: 900;
+    padding: 40px 0 25px 0;
+}
+
+.sec1-text p{
+    font-size: 16px;
+    padding-bottom: 20px;
+}
+
+.sec1-text .btn{
+    display: block;
+    padding: 12px 45px;
+    background-color: var(--mehroon);
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+}
+
+/* ########## Section 2 ######### */
+
+.sec2{
+    background-image: linear-gradient(-90deg, var(--white) 50%, var(--mehroon) 50%);
+    height: 650px;
+    
+    margin-bottom: 40px;
+}
+
+.university-items{
+    display: flex;
+    position: relative;
+}
+
+.university-text{
+    width: 600px;
+    padding: 90px 90px 90px 30px;
+    color: var(--white);
+}
+
+.university-text h1{
+    font-size: 40px;
+    font-weight: 500;
+    padding-bottom: 50px;  
+}
+
+.university-text h1:after {
+    content: "";
+    border-bottom: 3px solid var(--white);
+    width: 40%;
+    display: block;
+    padding-top: 50px;
+}
+
+.university-text p{
+    font-size: 20px;
+    padding-bottom: 50px;
+}
+
+.university-text .btn{
+    display: block;
+    padding: 13px 25px;
+    color: var(--white);
+    background-color: var(--mehroon);
+    border: 1px solid var(--white);
+    cursor: pointer;
+}
+
+.university-img img{
+    width: 600px;
+    height: 400px;
+    position: absolute;
+    top: 16%;
+    right: 6%;
+}
+
+/* ############ Section 3 ############ */
+
+
+.sec3{
+    margin-bottom: 40px;
+}
+
+[type=radio] {
+   display: none;
+}
+
+#slider{
+    height: 35vw;
+    position: relative;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+
+#slider label{
+    margin: auto;
+    width: 50%;
+    height: 40%;
+    border-radius: 4px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+}
+
+#slider label p{
+    font-size: 20px;
+}
+
+#s1:checked ~ #slide2, #s2:checked ~ #slide3, #s3:checked ~ #slide1{
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, .37);
+    transform: translate3d(30%, 0, -200px);
+}
+
+#s1:checked ~ #slide3, #s2:checked ~ #slide1, #s3:checked ~ #slide2{
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, .3), 0 2px 2px 0 rgba(0, 0, 0, .2);
+    transform: translate3d(15%, 0, -100px);
+}
+
+/* ########## Section 4 ########### */
+
+.sec4{
+    background-image: linear-gradient(90deg, var(--mehroon) 50%, var(--white) 50%);
+    height: 500px;
+    margin: 70px 0;
+}
+
+.content{
+    display: flex;
+    position: relative;
+}
+
+.content-text{
+    width: 600px;
+    padding: 90px 80px;
+    color: var(--white);
+}
+
+.content-text h1{
+    font-size: 28px;
+    font-weight: 500;
+    padding-bottom: 40px;
+}
+
+.content-text h1:after{
+    content: "";
+    display: block;
+    border-bottom: 1px solid var(--white);
+    width: 20%;
+    padding-top: 30px;
+}
+
+.content-text p{
+    font-size: 15px;
+    padding-bottom: 30px;
+    font-weight: 300;
+}
+
+.content-text .btn{
+    padding: 8px 20px;
+    color: var(--white);
+    background-color: var(--mehroon);
+    border: 1px solid var(--white);
+}
+
+.content-img img{
+    display: block;
+    width: 730px;
+    height: 500px;
+    position: absolute;
+    top: 0;
+    left: 49.5%;
+    object-fit: cover;
+}
+
+/* ########### Section 5 ########## */
+
+.sec5{
+    margin-bottom: 80px;
+    position: relative;
+}
+
+.sec5 .container .para1{
+    text-align: end;
+    padding-bottom: 40px;
+}
+
+.sec5 .para1:after{
+    content: "";
+    display: block;
+    width: 50%;
+    border-bottom: 2px solid var(--black);
+    padding: 20px 0;
+    position: absolute;
+    bottom: 3.5%;
+    right: 5%;
+}
+
+.student-items{
+    display: flex;
+    position: relative;
+}
+
+.student-text{
+    padding: 70px 60px;
+    width: 400px;
+}
+
+.student-text h1{
+    font-size: 33px;
+    font-weight: 500;
+    padding-bottom: 20px;
+}
+
+.student-text h1:after{
+    content: "";
+    display: block;
+    width: 35%;
+    border-bottom: 2px solid gray;
+    padding-top: 30px;
+}
+
+.student-text .para{
+    font-size: 19px;
+    padding-bottom: 20px;
+}
+
+.student-text .btn{
+    display: block;
+    padding: 10px 30px;
+    color: var(--white);
+    background-color: var(--mehroon);
+    border: none;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.student-text h3{
+    font-size: 20px;
+    font-weight: 500;
+    padding: 70px 0 40px 0;
+}
+
+.student-text h3::before{
+    content: "";
+    display: block;
+    width: 100%;
+    border-top: 13px solid var(--mehroon);
+    padding: 20px 0;
+}
+
+.student-text h3::after{
+    content: "";
+    display: block;
+    width: 60%;
+    border-bottom: 2px solid var(--mehroon);
+}
+span{
+    color: var(--mehroon);
+}
+
+
+.student-items .student-imgs{
+    display: flex;
+}
+
+.student-items .student-imgs img{
+    display: block;
+    width: 550px;
+    height: 430px;
+}
+
+.student-imgs .img1{
+    position: absolute;
+    top: 0%;
+    left: 35%;
+}
+
+.student-imgs .img2{
+    position: absolute;
+    top: 15%;
+    right: 3%;
+}
+
+/* ############# Section 6 ############ */
+
+.sec6{
+    background: url("./images/7.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0% 50%;
+    height: 650px;
+    margin-bottom: 20px;
+}
+
+.challenges .challenge-text{
+    width: 620px;
+    padding: 60px 0px 70px 10px;
+    color: var(--white);
+}
+
+.challenge-text h1{
+    padding: 0px 0px 30px 0;
+    font-weight: 500;
+}
+
+.challenge-text h1::before{
+    content: "";
+    display: block;
+    width: 25%;
+    border-top: 15px solid var(--mehroon);
+    padding-top: 40px;
+}
+
+.challenge-text p{
+    padding: 30px 0 40px 0;
+    font-size: 18px;
+}
+
+.challenge-text .btn{
+    padding: 12px 35px;
+    background-color: transparent;
+    color: var(--white);
+    border: 1px solid var(--white);
+    cursor: pointer;
+}
+
+.sec7{
+    margin-bottom: 10px;
+}
+
+.uni-types{
+    display: flex;
+    justify-content: space-around;
+}
+
+.uni-1{
+    position: relative;
+}
+
+.uni-1 .img-1{
+    width: 435px;
+    height: 500px;
+}
+
+.uni-text{
+    padding-left: 10px;
+    position: absolute;
+    bottom: 3%;
+    left: 0%;
+    width: 425px;
+    color: var(--white);
+}
+
+.uni-text p{
+    padding: 10px;
+    border-bottom: 1px solid var(--white);
+    font-size: 18px;
+}
+
+.uni-text .img-2{
+    margin-top: 5px;
+    width: 25px;
+    background-color: var(--white);
+}
+
+.uni-text a{
+    text-decoration: none;
+    color: var(--white);
+    border-bottom: 2px dashed var(--white);
+}
+
+/* ########## Section 8 ###### */
+
+.sec8{
+    background-image: linear-gradient(-90deg, var(--mehroon) 50%, var(--white) 50%);
+    height: 600px;
+}
+
+.global{
+    display: flex;
+    position: relative;
+}
+
+.global .global-img img{
+    width: 675px;
+    height: 600px;
+    position: absolute;
+    top: 0%;
+    right: 50%;
+}
+
+.global-text{
+    position: absolute;
+    left: 58%;
+    padding: 80px 30px;
+    color: var(--white);
+    width: 500px;
+}
+
+.global-text h1{
+    padding-bottom: 50px;
+    font-weight: 500;
+}
+
+.global-text h1::after{
+    content: "";
+    display: block;
+    width: 25%;
+    border-bottom: 1px solid var(--white);
+    padding-bottom: 20px;
+}
+
+.global-text p{
+    font-size: 17px;
+    font-weight: 300;
+    padding-bottom: 40px;
+}
+
+.global-text .btn{
+    padding: 10px 25px;
+    background-color: transparent;
+    color: var(--white);
+    border: 1px solid var(--white);
+    cursor: pointer;
+}
+
+.sec9{
+    background-color: var(--lightblack);
+}
+
+.navbar1{
+    display: flex;
+    justify-content: center;
+}
+
+.navbar-items{
+    display: flex;
+    padding: 40px 0;
+}
+
+.navbar-items li{
+    list-style: none;
+    padding-left: 40px;
+}
+
+.navbar-items a{
+    color: lightgray;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.icons{
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+.icons i{
+    padding-left: 30px;
+    font-size: 25px;
+    color: var(--white);
+    cursor: pointer;
+}
